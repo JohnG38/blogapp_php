@@ -235,6 +235,7 @@ footer p {
     border: var(--border);
     background-color: white;
     box-shadow: var(--box-shadow);
+    width: 50%;
 }
 
 .overflow {
@@ -248,4 +249,8 @@ footer p {
 
 .p-10 {
     padding: 10px;
+}
+
+.text-error {
+    color: var(--danger);
 }
