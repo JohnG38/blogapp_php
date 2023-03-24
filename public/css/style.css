@@ -38,6 +38,11 @@ ul {
     list-style-type: none;
 }
 
+h2 {
+    font-size: 1.4rem;
+    margin: 2rem .5rem;
+}
+
 a {
     color: inherit;
     text-decoration: none;
