@@ -223,7 +223,7 @@ footer p {
 
 /* content */
 .content {
-    max-width: 100rem;
+    max-width: 120rem;
     width: 100%;
     flex: 1;
     display: flex;
