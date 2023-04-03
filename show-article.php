@@ -1,5 +1,6 @@
 <?php
 
+$articleDAO = require_once './database/models/ArticleDAO.php';
 
 $articles = [];
 $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -8,11 +9,7 @@ $idArticle = $_GET['id'] ?? '';
 if(!$idArticle) {
     header('Location: /');
 } else {
-        $pdo = require_once './database/database.php';
-        $statement = $pdo->prepare('SELECT * FROM article WHERE id=:id');
-        $statement->bindValue(':id', $idArticle);
-        $statement->execute();
-        $article = $statement->fetch();
+        $article = $articleDAO->getOne($idArticle);
 }
 
 
