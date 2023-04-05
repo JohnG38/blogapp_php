@@ -1,5 +1,7 @@
 <?php
 
+    require __DIR__.'/database/database.php';
+
     /**
      * @var AuthDAO
      */
@@ -77,9 +79,8 @@
             <div class="block p-20 form-container">
                     <h1>Login</h1>
                     <form action="/auth-login.php" method="POST">
-                        <div class="form-control">
 
-                        <div class="form-control">
+                    <div class="form-control">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email">
                             <?php if($errors['email']) : ?>
