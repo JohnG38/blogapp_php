@@ -42,6 +42,7 @@
         $image = $article['image'];
         $category = $article['category'];
         $content = $article['content'];
+
     }
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -92,6 +93,7 @@
                 $article['image'] = $image;
                 $article['category'] = $category;
                 $article['content'] = $content;
+                $article['author'] = $currentUser['id'];
 
                 $articleDAO->updateOne($article, $idArticle);
 
@@ -102,6 +104,7 @@
                     'category' => $category,
                     'content' => $content,
                     'image' => $image,
+                    'author' => $currentUser['id']
                 ]);
             }
             // on enregistre les données

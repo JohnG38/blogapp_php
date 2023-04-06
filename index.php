@@ -72,6 +72,9 @@
                                             <div class="img-container" style="background-image: url(<?= $article['image'] ?>)"  ></div>
                                         </div>
                                         <h2><?= $article['title'] ?></h2>
+                                        <div class="article-author">
+                                            <p><?= $article['firstname'].' '.$article['lastname'] ?></p>
+                                        </div>
                                     </a>
                                 <?php endforeach; ?>
                             </div>
@@ -85,6 +88,9 @@
                                         <div class="img-container" style="background-image: url(<?= $article['image'] ?>)"  ></div>
                                     </div>
                                     <h2><?= $article['title'] ?></h2>
+                                    <div class="article-author">
+                                            <p><?= $article['firstname'].' '.$article['lastname'] ?></p>
+                                    </div>
                                 </a>
                             <?php endforeach; ?>
                         </div>
