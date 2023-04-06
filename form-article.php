@@ -37,6 +37,10 @@
     // EN mode edition on recupere notre article
     if($idArticle) {
         $article = $articleDAO->getOne($idArticle);
+        if($article['author'] !== $currentUser['id']) {
+            header('Location: /');
+        }
+
         
         $title = $article['title'];
         $image = $article['image'];

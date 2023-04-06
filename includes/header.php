@@ -14,12 +14,12 @@
                 <a href="/form-article.php">Add a article</a>
             </li>
 
-            <li class="<?= $_SERVER['REQUEST_URI'] === '/profile.php' ? 'active' : '' ?>">
-                <a href="/profile.php">My page</a>
-            </li>
-
             <li class="<?= $_SERVER['REQUEST_URI'] === '/auth-logout.php' ? 'active' : '' ?>">
                 <a href="/auth-logout.php">Logout</a>
+            </li>
+
+            <li class="<?= $_SERVER['REQUEST_URI'] === '/profile.php' ? 'active' : '' ?> header-profile">
+                <a href="/profile.php"><?= $currentUser['firstname'][0].$currentUser['lastname'][0] ?></a>
             </li>
 
         <?php else : ?>
